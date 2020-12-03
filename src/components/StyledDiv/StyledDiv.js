@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  width: 90%;
-  max-width: 40rem;
+  width: 90vh;
+  height: 80vw;
   margin: 2rem auto;
   border: 1px solid #ccc;
   padding: 1rem;

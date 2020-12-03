@@ -7,13 +7,16 @@ import ReactMapGL, {
 } from "react-map-gl";
 import { IoPin } from "react-icons/io5";
 
+import StyledDiv from "../StyledDiv/StyledDiv";
+import StyledButton from "../StyledButton/StyledButton";
+
 export default function Map() {
   const [darkmode, setDarkmode] = useState(false);
   const [viewport, setViewport] = useState({
     latitude: 41.47544,
     longitude: -81.78469,
-    width: "100vw",
-    height: "100vh",
+    height: "100%",
+    width: "100%",
     zoom: 13,
   });
 
@@ -21,23 +24,33 @@ export default function Map() {
   const darkMap = "mapbox://styles/kvnluo/cki8azb472zvd19obw4ydlvjd";
 
   return (
-    <div>
-      <ReactMapGL
-        transitionDuration={2000}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        mapStyle={darkmode ? darkMap : lightMap}
-        {...viewport}
-        onViewportChange={(newViewport) => setViewport(newViewport)}
-      >
-        <Marker latitude={41.47544} longitude={-81.78469} offsetLeft={-20} offsetTop={-10}>
-          <IoPin size={25} color="blue"/>
-        </Marker>
-        {/* button that zooms to user location */}
-        <GeolocateControl
-          positionOptions={{ enableHighAccuracy: true }}
-          trackUserLocation={true}
-        />
-      </ReactMapGL>
-    </div>
+    <>
+      <StyledButton onClick={() => setDarkmode(!darkmode)}>
+        {darkmode ? "Light" : "Dark"}
+      </StyledButton>
+      <StyledDiv>
+        <ReactMapGL
+          transitionDuration={2000}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          mapStyle={darkmode ? darkMap : lightMap}
+          {...viewport}
+          onViewportChange={(newViewport) => setViewport(newViewport)}
+        >
+          <Marker
+            latitude={41.47544}
+            longitude={-81.78469}
+            offsetLeft={-20}
+            offsetTop={-10}
+          >
+            <IoPin size={25} color="blue" />
+          </Marker>
+          {/* button that zooms to user location */}
+          <GeolocateControl
+            positionOptions={{ enableHighAccuracy: true }}
+            trackUserLocation={true}
+          />
+        </ReactMapGL>
+      </StyledDiv>
+    </>
   );
 }
