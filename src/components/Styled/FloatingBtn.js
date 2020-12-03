@@ -18,7 +18,7 @@ const FloatingLink = styled(Link)`
     outline: none;
   }
 
-  :hover {
+  &:hover {
     background: lightblue;
     color: blue;
     box-shadow: 2px 4px 5px 1px rgba(0, 0, 0, 0.75);
@@ -29,7 +29,7 @@ const FloatingLink = styled(Link)`
     margin-left: 1rem;
   }
 
-  :hover ~ span {
+  &:hover ~ span {
     color: var(--text-secondary);
     visibility: visible;
   }

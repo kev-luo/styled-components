@@ -1,6 +1,7 @@
 import React from 'react'
 
 import StyledNav from '../Styled/StyledNav'
+import ToggleBtn from '../Styled/ToggleBtn';
 
 export default function Nav() {
   return (
@@ -9,6 +10,7 @@ export default function Nav() {
         <a href="#">Ping</a>
       </div>
       <div>
+        <ToggleBtn />
         <a href="#">About</a>
         <a href="#">Settings</a>
         <a href="#">Logout</a>

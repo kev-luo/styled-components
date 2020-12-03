@@ -25,6 +25,7 @@ export default function LeftTabs() {
       <ul>
         <li>
           <RightFloatingBtn
+            as="button"
             onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })}
           >
             <HiOutlinePlus size={20} />
@@ -33,6 +34,7 @@ export default function LeftTabs() {
         </li>
         <li>
           <RightFloatingBtn
+            as="button"
             onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })}
           >
             <HiOutlineUser size={20} />
