@@ -3,21 +3,19 @@ import { GrUnorderedList } from "react-icons/gr";
 import { RiRoadMapLine } from "react-icons/ri";
 import TabContainer from "../Styled/TabContainer";
 import FloatingBtn from "../Styled/FloatingBtn";
-import { useDarkModeContext } from "../../utils/DarkContext";
 
 export default function LeftTabs() {
-  const { dispatch } = useDarkModeContext();
   return (
     <TabContainer>
       <ul>
         <li>
-          <FloatingBtn onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })}>
+          <FloatingBtn to="/">
             <GrUnorderedList size={20} />
           </FloatingBtn>
           <span>Feed</span>
         </li>
         <li>
-          <FloatingBtn onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })}>
+          <FloatingBtn to="/map">
             <RiRoadMapLine size={20} />
           </FloatingBtn>
           <span>Map</span>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
-const FloatingBtn = styled.button`
+const FloatingLink = styled(Link)`
   cursor: pointer;
   background: grey;
   color: white;
@@ -34,4 +35,4 @@ const FloatingBtn = styled.button`
   }
 `;
 
-export default FloatingBtn;
+export default FloatingLink;
