@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import ReactMapGL, { GeolocateControl, Marker } from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
 import { IoPin } from "react-icons/io5";
 
-import StyledDiv from "../StyledDiv/StyledDiv";
 import { useDarkModeContext } from "../../utils/DarkContext";
 
 export default function Map() {
@@ -21,28 +20,21 @@ export default function Map() {
   const darkMap = "mapbox://styles/kvnluo/cki8azb472zvd19obw4ydlvjd";
 
   return (
-    <StyledDiv>
-      <ReactMapGL
-        transitionDuration={2000}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        mapStyle={darkmode ? darkMap : lightMap}
-        {...viewport}
-        onViewportChange={(newViewport) => setViewport(newViewport)}
+    <ReactMapGL
+      transitionDuration={2000}
+      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+      mapStyle={darkmode ? darkMap : lightMap}
+      {...viewport}
+      onViewportChange={(newViewport) => setViewport(newViewport)}
+    >
+      <Marker
+        latitude={41.47544}
+        longitude={-81.78469}
+        offsetLeft={-20}
+        offsetTop={-10}
       >
-        <Marker
-          latitude={41.47544}
-          longitude={-81.78469}
-          offsetLeft={-20}
-          offsetTop={-10}
-        >
-          <IoPin size={25} color="blue" />
-        </Marker>
-        {/* button that zooms to user location */}
-        <GeolocateControl
-          positionOptions={{ enableHighAccuracy: true }}
-          trackUserLocation={true}
-        />
-      </ReactMapGL>
-    </StyledDiv>
+        <IoPin size={25} color="blue" />
+      </Marker>
+    </ReactMapGL>
   );
 }
