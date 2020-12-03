@@ -1,13 +1,15 @@
 import React from "react";
 
-import StyledTab from "../StyledTab/StyledTab";
-import StyledDiv from "../StyledDiv/StyledDiv";
+import LeftTabs from "../Tabs/LeftTabs";
+import RightTabs from "../Tabs/RightTabs";
+import StyledDiv from "../Styled/StyledDiv";
 import Map from "../Map/Map";
 
 export default function Home() {
   return (
     <StyledDiv>
-      <StyledTab />
+      <LeftTabs />
+      <RightTabs />
       <Map />
     </StyledDiv>
   );

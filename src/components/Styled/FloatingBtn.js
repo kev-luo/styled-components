@@ -1,14 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const FloatingBtn = styled.a.attrs(() => ({ tabIndex: 0}))`
+const FloatingBtn = styled.button`
   cursor: pointer;
   background: grey;
   color: white;
-  padding: 1rem;
+  padding: 1.1rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  box-shadow: 2px 4px 5px -1px rgba(0, 0, 0, 0.75);
+  transition: 500ms ease;
 
   :focus {
     outline: none;
@@ -17,12 +20,18 @@ const FloatingBtn = styled.a.attrs(() => ({ tabIndex: 0}))`
   :hover {
     background: lightblue;
     color: blue;
+    box-shadow: 2px 4px 5px 1px rgba(0, 0, 0, 0.75);
   }
-  
-  :hover + .item-description {
+
+  & ~ span {
+    display: none;
+    margin-left: 1rem;
+  }
+
+  :hover ~ span {
     color: var(--text-secondary);
     display: block;
   }
-`
+`;
 
 export default FloatingBtn;
