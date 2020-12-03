@@ -11,7 +11,7 @@ const FloatingBtn = styled.button`
   align-items: center;
   border: none;
   box-shadow: 2px 4px 5px -1px rgba(0, 0, 0, 0.75);
-  transition: 500ms ease;
+  transition: 300ms ease;
 
   :focus {
     outline: none;
@@ -24,13 +24,13 @@ const FloatingBtn = styled.button`
   }
 
   & ~ span {
-    display: none;
+    visibility: hidden;
     margin-left: 1rem;
   }
 
   :hover ~ span {
     color: var(--text-secondary);
-    display: block;
+    visibility: visible;
   }
 `;
 

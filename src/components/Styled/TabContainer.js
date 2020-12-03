@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const TabContainer = styled.div`
+  margin: 4rem 1rem;
   position: fixed;
   height: 80%;
   z-index: 1;
@@ -19,7 +20,7 @@ const TabContainer = styled.div`
     flex-direction: row;
     align-items: center;
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 `;
 
