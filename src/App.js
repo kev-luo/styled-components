@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import Map from "./components/Map/Map";
+import Home from "./components/Home/Home";
+import { DarkModeProvider } from "./utils/DarkContext";
 
 function App() {
   return (
-    <Map />
+    <DarkModeProvider>
+      <Home />
+    </DarkModeProvider>
   );
 }
 

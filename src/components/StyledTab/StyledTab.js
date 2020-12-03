@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./StyledTab.css";
 
 export default function StyledTab() {
   return (
-    <div>
-      
-    </div>
-  )
+    <nav className="navbar">
+      <ul>
+        <li>Hello</li>
+      </ul>
+    </nav>
+  );
 }
