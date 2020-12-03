@@ -1,15 +1,10 @@
 import React from 'react';
 
-import StyledDiv from './components/StyledDiv'
-import StyledButton from './components/StyledButton';
+import Map from "./components/Map/Map";
 
 function App() {
   return (
-    <StyledDiv>
-      <StyledButton>
-        Kevin
-      </StyledButton>
-    </StyledDiv>
+    <Map />
   );
 }
 
