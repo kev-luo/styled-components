@@ -26,11 +26,11 @@ const Input = styled.input.attrs((props) => ({
     background: #fff;
     box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
-    transition: 0.5s;
+    transition: .5s;
   }
 
   &:checked:before {
-    left: 1rem;
+    left: 2.4rem;
   }
 `;
 
