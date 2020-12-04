@@ -6,10 +6,7 @@ import FloatingBtn from "../Styled/FloatingBtn";
 import { useDarkModeContext } from "../../utils/DarkContext";
 
 const RightTabContainer = styled(TabContainer)`
-  right: 1rem;
-  ul {
-    width: 4rem;
-  }
+  right: 6rem;
   li {
     flex-direction: row-reverse;
   }
@@ -17,7 +14,6 @@ const RightTabContainer = styled(TabContainer)`
 
 const RightFloatingBtn = styled(FloatingBtn)`
   & ~ span {
-    margin-left: 0;
     margin-right: 1rem;
   }
 `;

@@ -6,9 +6,12 @@ import TabContainer from "../Styled/TabContainer";
 import FloatingBtn from "../Styled/FloatingBtn";
 
 const LeftTabContainer = styled(TabContainer)`
-  left: 1rem;
-  ul {
-    width: 4.7rem;
+  left: 6rem;
+`;
+
+const LeftFloatingBtn = styled(FloatingBtn)`
+  & ~ span {
+    margin-left: 1rem;
   }
 `;
 
@@ -17,15 +20,15 @@ export default function LeftTabs() {
     <LeftTabContainer>
       <ul>
         <li>
-          <FloatingBtn to="/map">
+          <LeftFloatingBtn to="/map">
             <RiRoadMapLine size={20} />
-          </FloatingBtn>
+          </LeftFloatingBtn>
           <span>Map</span>
         </li>
         <li>
-          <FloatingBtn to="/">
+          <LeftFloatingBtn to="/">
             <GrUnorderedList size={20} />
-          </FloatingBtn>
+          </LeftFloatingBtn>
           <span>Feed</span>
         </li>
       </ul>

@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 const TabContainer = styled.div`
-  top: 5%;
   position: absolute;
   height: 100%;
   z-index: 15;
 
   ul {
     position: sticky;
-    top: 8.2%;
+    top: 10rem;
     list-style-type: none;
+    width: 4rem;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,10 +17,10 @@ const TabContainer = styled.div`
   }
 
   li {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 5rem;
   }
 `;
 

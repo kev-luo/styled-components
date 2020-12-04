@@ -27,7 +27,6 @@ const FloatingLink = styled(Link)`
 
   & ~ span {
     visibility: hidden;
-    margin-left: 1rem;
   }
 
   &:hover ~ span {
