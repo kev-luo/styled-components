@@ -1,10 +1,5 @@
-import React, { useContext } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useLocation,
-} from "react-router-dom";
+import React from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 
 import MapView from "./pages/MapView";
@@ -17,11 +12,10 @@ import { DarkModeProvider } from "./utils/DarkContext";
 function App() {
   const location = useLocation();
   const transition = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, 
-    enter: { opacity: 1, transform: 'translate3d(0,0px,0)' }, 
-    leave: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, 
+    from: { opacity: 0, transform: "translate3d(0,-40px,0)" },
+    enter: { opacity: 1, transform: "translate3d(0,0px,0)" },
+    leave: { opacity: 0, transform: "translate3d(0,-40px,0)" },
   });
-  
 
   return (
     <DarkModeProvider>
