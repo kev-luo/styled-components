@@ -6,8 +6,9 @@ import TabContainer from "../Styled/TabContainer";
 import FloatingBtn from "../Styled/FloatingBtn";
 
 const LeftTabContainer = styled(TabContainer)`
+  left: 1rem;
   ul {
-    width: 4rem;
+    width: 4.7rem;
   }
 `;
 

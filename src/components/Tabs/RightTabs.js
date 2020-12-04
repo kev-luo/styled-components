@@ -17,6 +17,7 @@ const RightTabContainer = styled(TabContainer)`
 
 const RightFloatingBtn = styled(FloatingBtn)`
   & ~ span {
+    margin-left: 0;
     margin-right: 1rem;
   }
 `;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const StyledPing = styled.div`
-  width: 65%;
+  width: 75%;
   ${'' /* border: 1px solid #cfcfcf; */}
   padding: 1rem 1rem;
-  margin-top: 2rem;
+  margin-top: .7rem;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 2fr;
   grid-template-rows: 1fr 1fr 2rem 1fr;
@@ -47,7 +47,7 @@ const StyledPing = styled.div`
   }
   .sxy_line {
     grid-area: sxy_line;
-    align-self: center;
+    align-self: end;
     height: 1px;
     background: linear-gradient(to right, #f2f2f2, black, #f2f2f2);
   }
