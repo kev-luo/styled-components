@@ -10,7 +10,7 @@ const StyledProfileModal = styled.div`
   border-radius: 3px;
   z-index: 1;
   display: grid;
-  width: 20%;
+  width: 15.5rem;
   height: 18rem;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: 2.5fr 1fr 1fr;

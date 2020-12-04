@@ -13,6 +13,12 @@ const RightTabContainer = styled(TabContainer)`
 `;
 
 const RightFloatingBtn = styled(FloatingBtn)`
+  color: #22CCF2;
+  &:hover {
+    box-shadow: 2px 4px 6px -1px rgba(34, 204, 242, 0.75);
+    transform: scale(1.1);
+    ${'' /* box-shadow: 5px 4px 10px 2px #26bf47; */}
+  }
   & ~ span {
     margin-right: 1rem;
   }
