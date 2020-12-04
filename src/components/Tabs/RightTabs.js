@@ -7,6 +7,9 @@ import { useDarkModeContext } from "../../utils/DarkContext";
 
 const RightTabContainer = styled(TabContainer)`
   right: 1rem;
+  ul {
+    width: 4rem;
+  }
   li {
     flex-direction: row-reverse;
   }
@@ -30,7 +33,7 @@ export default function LeftTabs() {
           >
             <HiOutlinePlus size={20} />
           </RightFloatingBtn>
-          <span className="description">New Ping</span>
+          <span className="description">Ping</span>
         </li>
         <li>
           <RightFloatingBtn

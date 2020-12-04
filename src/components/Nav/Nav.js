@@ -16,7 +16,7 @@ export default function Nav() {
       <div className="logo">
         <Link to="/">Ping</Link>
       </div>
-      <div>
+      <div className="nav">
         <span>{darkmode ? "☀️" : "🌙"}</span>
         <ToggleBtn onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })} />
         <Link to="/about">About</Link>

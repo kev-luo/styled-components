@@ -1,12 +1,20 @@
 import React from "react";
+import styled from 'styled-components';
 import { GrUnorderedList } from "react-icons/gr";
 import { RiRoadMapLine } from "react-icons/ri";
 import TabContainer from "../Styled/TabContainer";
 import FloatingBtn from "../Styled/FloatingBtn";
 
+const LeftTabContainer = styled(TabContainer)`
+  ul {
+    width: 4rem;
+  }
+`;
+
 export default function LeftTabs() {
+  
   return (
-    <TabContainer>
+    <LeftTabContainer>
       <ul>
         <li>
           <FloatingBtn to="/">
@@ -21,6 +29,6 @@ export default function LeftTabs() {
           <span>Map</span>
         </li>
       </ul>
-    </TabContainer>
+    </LeftTabContainer>
   );
 }

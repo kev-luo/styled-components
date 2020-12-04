@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledNav = styled.nav`
   height: 4rem;
@@ -22,9 +22,17 @@ const StyledNav = styled.nav`
     }
   }
 
-  .logo {
+  .logo * {
     font-size: 30px;
+    line-height: 100px;
+    letter-spacing: 3px;
   }
-`
+
+  .nav {
+    font-size: 20px;
+    line-height: 100px;
+    letter-spacing: 1px;
+  }
+`;
 
 export default StyledNav;
