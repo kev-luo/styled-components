@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import AbsoluteWrapper from "../components/Styled/AbsoluteWrapper";
 
 export default function Settings() {
   return (
-    <div>
-      Settings
-    </div>
-  )
+    <AbsoluteWrapper>
+      <div>Settings</div>
+    </AbsoluteWrapper>
+  );
 }

@@ -1,26 +1,42 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useContext } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
+import { useTransition, animated } from "react-spring";
 
 import MapView from "./pages/MapView";
 import FeedView from "./pages/FeedView";
-import About from './pages/About';
-import Settings from './pages/Settings';
+import About from "./pages/About";
+import Settings from "./pages/Settings";
 import Nav from "./components/Nav/Nav";
 import { DarkModeProvider } from "./utils/DarkContext";
 
 function App() {
+  const location = useLocation();
+  const transition = useTransition(location, (location) => location.pathname, {
+    from: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, // fade in
+    enter: { opacity: 1, transform: 'translate3d(0,0px,0)' }, // fade to total view
+    leave: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, // fade out of view
+  });
+  
+
   return (
-    <Router>
-      <DarkModeProvider>
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={FeedView} />
-          <Route exact path="/map" component={MapView} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/settings" component={Settings} />
-        </Switch>
-      </DarkModeProvider>
-    </Router>
+    <DarkModeProvider>
+      <Nav />
+      {transition.map(({ item, props, key }) => (
+        <animated.div key={key} style={props}>
+          <Switch location={item}>
+            <Route exact path="/" component={FeedView} />
+            <Route exact path="/map" component={MapView} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/settings" component={Settings} />
+          </Switch>
+        </animated.div>
+      ))}
+    </DarkModeProvider>
   );
 }
 

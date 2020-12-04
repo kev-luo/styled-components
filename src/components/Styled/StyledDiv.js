@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
   width: 100vw;
-  ${'' /* height: 100vh; */}
-  margin: 0 auto;
-  border: 1px solid #ccc;
   padding: 1rem;
-  padding-top: 5rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
