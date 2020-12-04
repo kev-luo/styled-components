@@ -1,24 +1,28 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import StyledNav from '../Styled/StyledNav'
-import ToggleBtn from '../Styled/ToggleBtn';
-import { useDarkModeContext } from '../../utils/DarkContext';
+import StyledNav from "../Styled/StyledNav";
+import ToggleBtn from "../Styled/ToggleBtn";
+import { useDarkModeContext } from "../../utils/DarkContext";
 
 export default function Nav() {
-  const {state: {darkmode}, dispatch} = useDarkModeContext();
+  const {
+    state: { darkmode },
+    dispatch,
+  } = useDarkModeContext();
 
   return (
     <StyledNav>
       <div className="logo">
-        <a href="#">Ping</a>
+        <Link to="/">Ping</Link>
       </div>
       <div>
         <span>{darkmode ? "☀️" : "🌙"}</span>
-        <ToggleBtn onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })}/>
-        <a href="#">About</a>
-        <a href="#">Settings</a>
-        <a href="#">Logout</a>
+        <ToggleBtn onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })} />
+        <Link to="/about">About</Link>
+        <Link to="/settings">Settings</Link>
+        <Link to="/">Logout</Link>
       </div>
     </StyledNav>
-  )
+  );
 }

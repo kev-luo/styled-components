@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const TabContainer = styled.div`
-  margin: 4rem 1rem;
+  margin: 5rem 2.2rem;
   position: fixed;
   height: 80%;
   z-index: 1;

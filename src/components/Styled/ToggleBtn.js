@@ -12,6 +12,8 @@ const Input = styled.input.attrs((props) => ({
   border-radius: 20px;
   box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.5);
   transition: .5s;
+  position: relative;
+  margin-left: 0.3rem;
 
   &:checked {
     background: #03a9f4;
@@ -30,7 +32,7 @@ const Input = styled.input.attrs((props) => ({
   }
 
   &:checked:before {
-    left: 2.4rem;
+    left: 1rem;
   }
 `;
 
