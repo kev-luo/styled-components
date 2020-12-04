@@ -7,18 +7,12 @@ import AbsoluteWrapper from "../components/Styled/AbsoluteWrapper";
 
 export default function FeedView() {
   return (
-    <AbsoluteWrapper>
-      <div
-        style={{
-          backgroundAttachment: "fixed",
-          minHeight: "100vh",
-          display: "flex",
-        }}
-      >
-        <LeftTabs />
-        <RightTabs />
+    <>
+      <LeftTabs />
+      <RightTabs />
+      <AbsoluteWrapper>
         <Feed />
-      </div>
-    </AbsoluteWrapper>
+      </AbsoluteWrapper>
+    </>
   );
 }

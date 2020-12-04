@@ -47,38 +47,7 @@ export default function Feed() {
         Hello
         <div className="sxy_line"></div>
       </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
-      <StyledPing className="ping">
-        Hello
-        <div className="sxy_line"></div>
-      </StyledPing>
+      
     </StyledDiv>
   );
 }

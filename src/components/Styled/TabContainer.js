@@ -3,7 +3,9 @@ import styled from "styled-components";
 const TabContainer = styled.div`
   margin: 5rem 2.2rem;
   position: fixed;
-  z-index: 1;
+  height: 100%;
+  top: 10%;
+  z-index: 15;
 
   ul {
     list-style-type: none;
@@ -11,7 +13,6 @@ const TabContainer = styled.div`
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
 
   li {

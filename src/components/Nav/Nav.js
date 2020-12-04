@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import StyledNav from "../Styled/StyledNav";
 import ToggleBtn from "../Styled/ToggleBtn";
@@ -14,15 +14,23 @@ export default function Nav() {
   return (
     <StyledNav>
       <div className="logo">
-        <Link to="/">Ping</Link>
+      <NavLink exact to="/" activeStyle={logoActive}>Ping</NavLink>
       </div>
       <div className="nav">
         <span>{darkmode ? "☀️" : "🌙"}</span>
         <ToggleBtn onClick={() => dispatch({ type: "TOGGLE_DARKMODE" })} />
-        <Link to="/about">About</Link>
-        <Link to="/settings">Settings</Link>
-        <Link to="/">Logout</Link>
+        <NavLink exact to="/about" activeStyle={active}>About</NavLink>
+        <NavLink exact to="/settings" activeStyle={active}>Settings</NavLink>
       </div>
     </StyledNav>
   );
+}
+
+const active = {
+  color: "#5BA66E",
+  textDecoration: "underline"
+}
+
+const logoActive = {
+  color: "#5BA66E",
 }

@@ -17,9 +17,9 @@ import { DarkModeProvider } from "./utils/DarkContext";
 function App() {
   const location = useLocation();
   const transition = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, // fade in
-    enter: { opacity: 1, transform: 'translate3d(0,0px,0)' }, // fade to total view
-    leave: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, // fade out of view
+    from: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, 
+    enter: { opacity: 1, transform: 'translate3d(0,0px,0)' }, 
+    leave: { opacity: 0, transform: 'translate3d(0,-40px,0)' }, 
   });
   
 
