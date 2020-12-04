@@ -6,10 +6,86 @@ export default function Feed() {
   return (
     <StyledDiv>
       <div>Feed</div>
-      <StyledPing>
+
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
+        Hello
+        <div className="sxy_line"></div>
+      </StyledPing>
+      <StyledPing className="ping">
         Hello
         <div className="sxy_line"></div>
       </StyledPing>
     </StyledDiv>
   );
+}
+
+{
+  /* <div className="fade">
+  <p></p>
+  <p></p>
+</div> */
 }
