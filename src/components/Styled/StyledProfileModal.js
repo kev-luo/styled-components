@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
-// delete border and background color once done styling
+// delete border once done styling
 // also finalize height and width
 
 const StyledProfileModal = styled.div`
-  border: 1px solid grey;
-  background: grey;
+  background: #EBEDF2;
   position: fixed;
   border-radius: 3px;
   z-index: 1;
@@ -13,11 +12,11 @@ const StyledProfileModal = styled.div`
   width: 15.5rem;
   height: 18rem;
   grid-template-columns: 1fr 3fr 3fr 1fr;
-  grid-template-rows: 2.5fr 1fr 1fr;
+  grid-template-rows: 2.5fr 1fr .7fr;
   grid-template-areas:
-  ". img      img      ."
-  ". username username ."
-  ". posted   supports .";
+  ".        img      img      ."
+  ".        username username ."
+  "supports supports posted   posted";
   .img {
     grid-area: img;
     align-self: end;
@@ -30,15 +29,15 @@ const StyledProfileModal = styled.div`
     align-self: start;
     justify-self: center;
   }
-  .posted {
-    grid-area: posted;
-    align-self: start;
-    justify-self: center;
-  }
   .supports {
     grid-area: supports;
-    align-self: start;
-    justify-self: center;
+    align-self: end;
+    justify-self: start;
+  }
+  .posted {
+    grid-area: posted;
+    align-self: end;
+    justify-self: start;
   }
 
 `
