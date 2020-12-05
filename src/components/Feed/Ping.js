@@ -7,10 +7,10 @@ import { BiDownvote, BiUpvote } from "react-icons/bi";
 import { LikeBtn, DismissBtn, CommentBtn } from "../Styled/StyledPingIcons";
 import StyledPing from "../Styled/StyledPing";
 
-export default function Ping() {
+export default function Ping({open, setOpen}) {
   return (
     <StyledPing className="ping">
-      <Avatar className="img">
+      <Avatar className="img" onClick={() => setOpen(!open)}>
         <HiOutlineUser size={20} />
       </Avatar>
       <h4 className="username">
