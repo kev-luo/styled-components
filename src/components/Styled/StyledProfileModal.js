@@ -5,12 +5,9 @@ import styled from 'styled-components';
 
 const StyledProfileModal = styled.div`
   background: #EBEDF2;
-  position: fixed;
-  border-radius: 3px;
-  z-index: 1;
   display: grid;
-  width: 15.5rem;
-  height: 18rem;
+  width: 100%;
+  height: 100%;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: 2.5fr 1fr .7fr;
   grid-template-areas:
